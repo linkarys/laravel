@@ -5,5 +5,5 @@
 @stop
 
 @section('content')
-	<p>hello post!</p>
+	<h1>{{$dog->name}} : {{$dog->age}}</h1>
 @stop

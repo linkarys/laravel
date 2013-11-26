@@ -37,3 +37,5 @@ Route::get('debug', function() {
 Route::controller('users', 'UsersController');
 
 Route::resource('posts', 'PostsController');
+
+Route::resource('dogs', 'DogsController');

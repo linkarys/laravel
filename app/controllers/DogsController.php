@@ -1,6 +1,6 @@
 <?php
 
-class PostsController extends BaseController {
+class DogsController extends BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,8 +9,9 @@ class PostsController extends BaseController {
 	 */
 	public function index()
 	{
-        return View::make('posts.index')
-        	->with('post', Post::all());
+		$dogs = Dog::all();
+
+        return View::make('dogs.index', compact('dogs'));
 	}
 
 	/**
@@ -20,7 +21,7 @@ class PostsController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('posts.create');
+        return View::make('dogs.create');
 	}
 
 	/**
@@ -41,7 +42,8 @@ class PostsController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('posts.show');
+		$dog = Dog::find($id);
+        return View::make('dogs.show', compact('dog'));
 	}
 
 	/**
@@ -52,7 +54,7 @@ class PostsController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('posts.edit');
+        return View::make('dogs.edit');
 	}
 
 	/**

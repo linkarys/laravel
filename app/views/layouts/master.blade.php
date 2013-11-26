@@ -25,12 +25,12 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="/">Home</a></li>
-			<li><a href="#">Link</a></li>
+			<li><a href="/">Home</a></li>
+			<li><a href="posts/">Post</a></li>
 			<li class="dropdown">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
 			<ul class="dropdown-menu">
-				<li><a href="#">Action</a></li>
+				<li><a href="{{route('dogs.index')}}">Dogs</a></li>
 				<li><a href="#">Another action</a></li>
 				<li><a href="#">Something else here</a></li>
 				<li class="divider"></li>
@@ -61,7 +61,7 @@
 
 	<div class="container">
 		@if(Session::has('message'))
-			<div class="alert alert-warning alert-dismissable">
+			<div class="alert alert-info alert-dismissable">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 				<strong>Alert!</strong> {{session::get('message')}}
 			</div>

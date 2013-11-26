@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateDogTable extends Migration {
+class CreateDogsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,7 @@ class CreateDogTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('dog', function(Blueprint $table) {
+		Schema::create('dogs', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('name');
 			$table->integer('age');
@@ -28,7 +28,7 @@ class CreateDogTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('dog');
+		Schema::drop('dogs');
 	}
 
 }
