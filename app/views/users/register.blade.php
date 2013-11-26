@@ -40,8 +40,12 @@
 		{{ Form::password('password_confirmation', array('class'=>'form-control col-sm-4', 'placeholder'=>'Confirm Password')) }}
 	</div>
 </div>
+<div class="row">
+	<div class="form-group">
+		{{ Form::submit('Register', array('class'=>'btn btn-default btn-primary'))}}
+	</div>
+</div>
 
-{{ Form::submit('Register', array('class'=>'btn btn-large btn-primary btn-block'))}}
 {{ Form::close() }}
 
 @stop
