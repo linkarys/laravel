@@ -11,7 +11,23 @@
 |
 */
 
-Route::get('/', function()
-{
+Route::get('/', function() {
 	return View::make('hello');
 });
+
+// Route::pattern('name', '\w+'); // 只对最近的一个route起作用
+// Route::get('hello/{name?}', function($name = 'zhuxiaoya') {
+// 	return View::make('greeting', array('name' => $name));
+// });
+
+// Route::get('user/{id}', function($id) {
+// 	return 'Id ' . $id;
+// })
+// ->where('id', '\d+');
+
+// Route::get('user/{name?}', function($name = 'John') {
+// 	return 'Name ' . $name;
+// })
+// ->where('name', '\w+');
+
+Route::controller('users', 'UsersController');

@@ -54,13 +54,13 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'database',
-			'username'  => 'root',
-			'password'  => '',
+			'host'      => 'bookshop.mysql.aliyun.com',
+			'database'  => 'bookshop',
+			'username'  => 'bookshop',
+			'password'  => 'L0veju_yang',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
+			'prefix'    => 'lv_',
 		),
 
 		'pgsql' => array(

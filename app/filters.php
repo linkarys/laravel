@@ -78,3 +78,15 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+
+Route::filter('id', function() {
+	if (Input::get('id') < 200) {
+		return Redirect::to('home');
+	}
+});
+
+
+Route::get('user', array('before' => 'id', function() {
+	return 'You are over 200 years old!';
+}));

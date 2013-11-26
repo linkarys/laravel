@@ -20,6 +20,20 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $hidden = array('password');
 
 	/**
+	 * The attributes excluded from the model's JSON form.
+	 *
+	 * @var array
+	 */
+
+	public static $rules = array(
+		'firstname'=>'required|alpha|min:2',
+		'lastname'=>'required|alpha|min:2',
+		'email'=>'required|email|unique:users',
+		'password'=>'required|alpha_num|between:6,12|confirmed',
+		'password_confirmation'=>'required|alpha_num|between:6,12'
+		);
+
+	/**
 	 * Get the unique identifier for the user.
 	 *
 	 * @return mixed
@@ -49,4 +63,8 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
+	public function getLogout() {
+		Auth::logout();
+		return Redirect::to('users/login')->with('message', 'Your are now logged out!');
+	}
 }
