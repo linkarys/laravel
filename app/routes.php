@@ -35,3 +35,5 @@ Route::get('debug', function() {
 // ->where('name', '\w+');
 
 Route::controller('users', 'UsersController');
+
+Route::resource('posts', 'PostsController');
