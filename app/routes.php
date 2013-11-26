@@ -15,6 +15,10 @@ Route::get('/', function() {
 	return View::make('hello');
 });
 
+Route::get('debug', function() {
+	return View::make('debug');
+});
+
 // Route::pattern('name', '\w+'); // 只对最近的一个route起作用
 // Route::get('hello/{name?}', function($name = 'zhuxiaoya') {
 // 	return View::make('greeting', array('name' => $name));

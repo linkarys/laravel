@@ -5,27 +5,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	{{ HTML::style('packages/bootstrap/css/bootstrap.min.css') }}
 	{{ HTML::style('css/main.css')}}
-	<script src="js/jquery-1.10.2.min.js"></script>
-	<script src="bootstrap/js/bootstrap.min.js"></script>
+	{{ HTML::script('js/jquery-1.10.2.min.js')}}
+	{{ HTML::script('packages/bootstrap/js/bootstrap.min.js')}}
+
 </head>
 <body>
 	@section('nav')
-	<nav class="navbar navbar-default" role="navigation">
+	<nav class="navbar navbar-inverse" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
-		<a class="navbar-brand" href="#">Brand</a>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">linkarys</a>
 		</div>
 
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Link</a></li>
+			<li class="active"><a href="/">Home</a></li>
 			<li><a href="#">Link</a></li>
 			<li class="dropdown">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -49,7 +50,8 @@
 		<ul class="nav navbar-nav navbar-right">
 			@if(!Auth::check())
 				<li>{{ HTML::link('users/register', 'Register') }}</li>
-				<li>{{ HTML::link('users/login', 'Login') }}</li>
+				<!-- <li>{{ HTML::link('users/login', 'Login') }}</li> -->
+				<li><a href="#login-form" data-target="#login-form" data-toggle="modal">Login</a></li>
 			@else
 				<li>{{ HTML::link('users/logout', 'logout') }}</li>
 			@endif
@@ -60,8 +62,42 @@
 
 	<div class="container">
 		@if(Session::has('message'))
-			<p class="alert">{{session::get('message')}}</p>
+			<div class="alert alert-warning alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<strong>Alert!</strong> {{session::get('message')}}
+			</div>
+			<!-- Button trigger modal -->
 		@endif
+		<!-- login form -->
+		<div class="modal fade" id="login-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Please Login</h4>
+					</div>
+					<div class="modal-body">
+						{{ Form::open(array('url'=>'users/signin', 'class'=>'form-signin form-horizontal')) }}
+
+						<div class="row">
+							<div class="form-group">
+								{{ Form::text('firstname', null, array('class'=>'form-control col-sm-4', 'placeholder'=>'First Name')) }}
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group">
+								{{ Form::password('password', array('class'=>'form-control col-sm-4', 'placeholder'=>'Password')) }}
+							</div>
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						{{ Form::submit('Login', array('class'=>'btn btn-default btn-primary'))}}
+						{{ Form::close() }}
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
 		@yield('content')
 	</div>
 </body>

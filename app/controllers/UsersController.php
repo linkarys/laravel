@@ -27,5 +27,30 @@ class UsersController extends BaseController {
 	public function getLogin() {
 		$this->layout->content = View::make('users.login');
 	}
+
+	public function getLogout() {
+		Auth::logout();
+		return Redirect::to('/')->with('message', 'You are now logged out now!');
+	}
+
+	public function postSignin() {
+		if (Auth::attempt(array('firstname'=>Input::get('firstname'), 'password'=>Input::get('password')))) {
+			return Redirect::to('users/dashboard')->with('message', 'You are now logged in!');
+		} else {
+			return Redirect::to('/')
+			->with('message', 'Your username/password combination was incorrect')
+			->withInput();
+		}
+	}
+
+	public function getDashboard() {
+	   $this->layout->content = View::make('users.dashboard');
+	}
+
+
+	public function __construct() {
+		$this->beforeFilter('csrf', array('on'=>'post'));
+		$this->beforeFilter('auth', array('only'=>array('getDashboard')));
+	}
 }
 
