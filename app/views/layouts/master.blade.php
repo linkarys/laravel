@@ -7,7 +7,6 @@
 	{{ HTML::style('css/main.css')}}
 	{{ HTML::script('js/jquery-1.10.2.min.js')}}
 	{{ HTML::script('packages/bootstrap/js/bootstrap.min.js')}}
-
 </head>
 <body>
 	@section('nav')
