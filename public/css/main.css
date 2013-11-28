@@ -1,23 +1,18 @@
 body {
-   padding: 2px;
+	padding: 2px;
 }
 
-/*#navbar-example {
-    background-color: #EFEFCA;
-    border-radius: 20px;
+#fake-header {
+	height: 50px;
 }
-*/
+
 .container {
-	margin: 68px 0 0 10px;
+	padding: 10px 0 0 10px;
+	clear: both;
 }
 
-.myaffix .active, .subnav .active {
-	font-weight: bold;
-
-}
-
-.active .subnav{
-	display: block;
+.sidenav {
+	padding: 10px 0;
 }
 
 .subnav {
@@ -27,8 +22,35 @@ body {
 	padding-left: 25px;
 }
 
+.sidenav li > a {
+	color: #716b7a;
+	padding: 5px 20px;
+	margin-right: 2px;
+}
+
+.sidenav .active {
+	font-weight: bold;
+}
+
+.sidenav .active > a {
+	color: #000;
+	border-right: 1px solid steelblue;
+}
+
+.sidenav > li a:hover {
+	color: #333;
+}
+
+.sidenav-wrap {
+	background-color: #efefef;
+	border-radius: 6px;
+}
+
+.active .subnav{
+	display: block;
+}
 
 .form-signup, .form-signin {
-   width: 400px;
-   margin: 0 auto;
+	width: 400px;
+	margin: 0 auto;
 }

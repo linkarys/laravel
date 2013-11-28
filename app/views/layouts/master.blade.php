@@ -3,14 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 	{{ HTML::style('packages/bootstrap/css/bootstrap.min.css') }}
 	{{ HTML::style('css/main.css')}}
 	{{ HTML::script('js/jquery-1.10.2.min.js')}}
 	{{ HTML::script('packages/bootstrap/js/bootstrap.min.js')}}
+
+	<!--[if lt IE 9]>
+	    <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+	    <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+
 	@section('header')
 	@show
 </head>
-<body>
+<body data-spy="scroll" target="#nav-slide">
 	@section('nav')
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
@@ -59,6 +67,9 @@
 		</ul>
 		</div><!-- /.navbar-collapse -->
 	</nav>
+
+	<div id="fake-header"></div>
+
 	@show
 
 	<div class="container">
@@ -100,6 +111,19 @@
 			</div><!-- /.modal-dialog -->
 		</div>
 		@yield('content')
+	</div>
+
+	<div class="footer text-right">
+		<address>
+			<strong>linkary</strong><br>
+			12345678<br>
+			Qingdao, Shangdong<br>
+			266-7345011<br>
+		</address>
+		<address>
+			<strong>Full Name</strong><br>
+			<a href="mailto:linkarys@gmail.com">linkarys@gmail.com</a>
+		</address>
 	</div>
 </body>
 </html>
