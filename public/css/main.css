@@ -2,6 +2,32 @@ body {
    padding: 2px;
 }
 
+/*#navbar-example {
+    background-color: #EFEFCA;
+    border-radius: 20px;
+}
+*/
+.container {
+	margin: 68px 0 0 10px;
+}
+
+.myaffix .active, .subnav .active {
+	font-weight: bold;
+
+}
+
+.active .subnav{
+	display: block;
+}
+
+.subnav {
+	list-style: none;
+	font-weight: normal;
+	display: none;
+	padding-left: 25px;
+}
+
+
 .form-signup, .form-signin {
    width: 400px;
    margin: 0 auto;

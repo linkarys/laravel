@@ -7,10 +7,12 @@
 	{{ HTML::style('css/main.css')}}
 	{{ HTML::script('js/jquery-1.10.2.min.js')}}
 	{{ HTML::script('packages/bootstrap/js/bootstrap.min.js')}}
+	@section('header')
+	@show
 </head>
 <body>
 	@section('nav')
-	<nav class="navbar navbar-inverse" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
