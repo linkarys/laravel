@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function() {
-	return View::make('hello');
-});
 
 Route::get('debug', function() {
 	return View::make('debug');
@@ -39,3 +36,6 @@ Route::controller('users', 'UsersController');
 Route::resource('posts', 'PostsController');
 
 Route::resource('dogs', 'DogsController');
+
+Route::resource('/', 'HomeController');
+Route::resource('home', 'HomeController');

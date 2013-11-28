@@ -17,9 +17,9 @@ class HomeController extends BaseController {
 	protected $layout = 'layouts.master';
 
 
-	public function showWelcome()
+	public function index()
 	{
-		return $this->layout->content = View::make('hello.blade');
+		return $this->layout->content = View::make('hello');
 	}
 
 }
