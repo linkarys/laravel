@@ -121,10 +121,19 @@
 
 						<div class="row">
 							<div class="form-group">
-								<div class="col-md-offset-3 col-md-8">
-									<div class="checkbox">
-										{{ Form::label('remerber-me', 'Remerber me')}}
-										{{ Form::checkbox('remerber-me') }}
+								<label for="" class="col-md-3 control-label">Remerber:</label>
+								<div class="col-md-8">
+									<div class="checkbox-inline">
+										<label for="remerber-me">
+											<input type="checkbox" name="" id="remerber-me">
+											 me
+										</label>
+									</div>
+									<div class="checkbox-inline">
+										<label for="remerber-zhuxiaoay">
+											<input type="checkbox" name="" id="remerber-zhuxiaoay">
+											zhuxiaoay
+										</label>
 									</div>
 								</div>
 							</div>
