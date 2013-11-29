@@ -12,7 +12,7 @@
 <h1 class="text-center text-primary">Home Page <small>@linkary<abbr title="love">\(^_^)-</abbr>zhuxiaoya</small></h1>
 
 <div class="row">
-	<nav id="nav-slide" class="col-md-2 col-xs-3" role="navigation">
+	<nav id="nav-slide" class="col-md-2 visible-md visible-lg" role="navigation">
 		<!-- <div class="sidenav-wrap" data-spy="affix"> -->
 		<div class="wrap" data-spy="affix">
 			<ul class="nav nav-default nav-stacked main">

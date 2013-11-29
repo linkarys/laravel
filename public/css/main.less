@@ -2,6 +2,10 @@ body {
 	padding: 2px;
 }
 
+ul {
+	transition: 2s;
+}
+
 #fake-header {
 	height: 50px;
 }
@@ -9,8 +13,21 @@ body {
 .container {
 	padding: 10px 0 0 10px;
 	clear: both;
+	min-height: 500px;
 }
 
+/**
+ * Navigation Bat
+ * ----------------------------------------------------------------------------
+ */
+
+.dropdown {
+	&:hover {
+		> ul {
+			display: block;
+		}
+	}
+}
 
 /**
  * Slide

@@ -52,7 +52,7 @@
 			<li><a href="{{route('home.index')}}">Home</a></li>
 			<li><a href="{{route('posts.index')}}">Post</a></li>
 			<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+			<a href="#" class="dropdown-toggle">Dropdown <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li><a href="{{route('dogs.index')}}">Dogs</a></li>
 				<li><a href="#">Another action</a></li>
@@ -94,25 +94,39 @@
 			</div>
 			<!-- Button trigger modal -->
 		@endif
+
 		<!-- login form -->
-		<div class="modal fade" id="login-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal fade" id="login-form" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title" id="myModalLabel">Please Login</h4>
+						<h4 class="modal-title" id="modal-label">Please Login</h4>
 					</div>
 					<div class="modal-body">
 						{{ Form::open(array('url'=>'users/signin', 'class'=>'form-signin form-horizontal')) }}
 
 						<div class="row">
 							<div class="form-group">
-								{{ Form::text('firstname', null, array('class'=>'form-control col-sm-4', 'placeholder'=>'First Name')) }}
+								{{ Form::label('firstname', 'First Name:', array('class'=>'control-label col-md-3'))}}
+								<div class="col-md-8">{{ Form::text('firstname', null, array('class'=>'form-control', 'placeholder'=>'First Name')) }}</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="form-group">
-								{{ Form::password('password', array('class'=>'form-control col-sm-4', 'placeholder'=>'Password')) }}
+								{{ Form::label('password', 'Password:', array('class'=>'control-label col-md-3'))}}
+								<div class="col-md-8">{{ Form::password('password', array('class'=>'form-control', 'placeholder'=>'Password')) }}</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="form-group">
+								<div class="col-md-offset-3 col-md-8">
+									<div class="checkbox">
+										{{ Form::label('remerber-me', 'Remerber me')}}
+										{{ Form::checkbox('remerber-me') }}
+									</div>
+								</div>
 							</div>
 						</div>
 
