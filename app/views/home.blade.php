@@ -14,13 +14,13 @@
 <div class="row">
 	<nav id="nav-slide" class="col-md-2 col-xs-3" role="navigation">
 		<!-- <div class="sidenav-wrap" data-spy="affix"> -->
-		<div class="sidenav-wrap">
-			<ul class="nav nav-default nav-stacked sidenav">
+		<div class="wrap" data-spy="affix">
+			<ul class="nav nav-default nav-stacked main">
 				<li class=""><a href="#fat">fat</a></li>
 				<li class=""><a href="#mdo">mdo</a></li>
 				<li class="">
 					<a href="#one">one</a>
-					<ul class="subnav nav">
+					<ul class="sub nav nav-stacked ">
 						<li class=""><a href="#two">two</a></li>
 						<li class=""><a href="#three">three</a></li>
 						<li class=""><a href="#four">four</a></li>
@@ -32,13 +32,12 @@
 	</nav>
 	<div class="col-md-10 col-xs-9">
 		<div data-spy="scroll" id="scroll-body" data-target="#nav-slide" data-offset="0" class="scrollspy-example">
-			<h4 id="fat">@zhuxiaoya</h4>
-			<div class="row">
-				<!-- <div class="col-md-offset-1"> -->
-					<img src="img/lovenote.jpg" class="img-responsive" alt="">
-				<!-- </div> -->
-			</div>
+
 			<dl class="dl-horizontal text-left">
+				<dt></dt>
+				<dd><h4 id="fat">@zhuxiaoya</h4></dd>
+				<dt></dt>
+				<dd><img src="img/lovenote.jpg" class="img-responsive" alt=""></dd>
 				<dt>Description</dt>
 				<dd>A Description list is perfect for defining terms</dd>
 				<dt>Lorem</dt>

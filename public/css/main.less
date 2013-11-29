@@ -1,0 +1,80 @@
+body {
+	padding: 2px;
+}
+
+#fake-header {
+	height: 50px;
+}
+
+.container {
+	padding: 10px 0 0 10px;
+	clear: both;
+}
+
+
+/**
+ * Slide
+ * ----------------------------------------------------------------------------
+ */
+
+
+#nav-slide {
+	> .wrap {
+		background-color: #efefef;
+		border-radius: 6px;
+		padding: 10px 0;
+		width: 148px;
+	}
+
+	.sub {
+		// list-style: none;
+		display: none;
+		padding-left: 25px;
+	}
+
+	a {
+		color: #716b7a;
+		padding: 5px 15px;
+		margin-right: 2px;
+		&:hover {
+			color: #333;
+		}
+	}
+
+	.active {
+		> a {
+			color: #000;
+			font-weight: bold;
+			border-right: 1px solid steelblue;
+		}
+		> .sub {
+			display: block;
+		}
+	}
+}
+
+/**
+ * Shared
+ * ----------------------------------------------------------------------------
+ */
+
+p {
+	&:nth-child(odd) {
+		background-color: #efefef;
+	}
+	&:nth-child(even) {
+		background-color: #fefefe;
+	}
+}
+
+
+/**
+ * Form
+ * ----------------------------------------------------------------------------
+ */
+
+.form-signup,
+.form-signin {
+	width: 400px;
+	margin: 0 auto;
+}
