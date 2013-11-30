@@ -10,6 +10,7 @@
 	{{ HTML::script('js/jquery-1.10.2.min.js')}}
 	{{ HTML::script('js/less-1.5.0.min.js')}}
 	{{ HTML::script('packages/bootstrap/js/bootstrap.min.js')}}
+	{{ HTML::script('packages/holder/js/holder.js')}}
 
 	<!--[if lt IE 9]>
 		<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
