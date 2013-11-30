@@ -63,19 +63,19 @@
 <!-- media object -->
 <div class="media-list">
 	<div class="media">
-		<a href="#" class="pull-left"><img src="#" alt="#" data-src="holder.js/64x64/sky"></a>
+		<a href="#" class="pull-left"><img src="#" alt="#" data-src="holder.js/64x64/sky/text:linkary"></a>
 		<div class="media-body">
 			<div class="media-heading"><strong>Title</strong></div>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, aut, sequi, voluptatibus iusto ducimus repudiandae iure aspernatur necessitatibus sunt ipsum sint ad sed blanditiis odit delectus saepe quasi. Rem, iste?</p>
 		</div>
 	</div>
 	<div class="media">
-		<a href="#" class="pull-left"><img src="#" alt="" data-src="holder.js/64x64/lava"></a>
+		<a href="#" class="pull-left"><img src="#" alt="" data-src="holder.js/64x64/lava/text:yaya"></a>
 		<div class="media-body">
 			<div class="media-heading"><strong>Title</strong></div>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, laudantium at laboriosam porro laborum optio beatae in cumque fugiat voluptatibus! Pariatur, numquam, laboriosam eaque aperiam quo ipsam saepe soluta magnam!
 			<div class="media">
-				<a href="#" class="pull-left"><img data-src="holder.js/64x64/vine" alt=""></a>
+				<a href="#" class="pull-left"><img data-src="holder.js/64x64/vine/text:tian" alt=""></a>
 				<div class="media-body">
 					<div class="media-headering"><strong>Sub Title</strong></div>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, temporibus, eligendi, similique quam officia aut ullam accusantium modi earum nam ut ratione facilis pariatur sit animi. Necessitatibus libero atque labore?</p>
@@ -84,7 +84,7 @@
 		</div>
 	</div>
 	<div class="media">
-		<a href="#" class="pull-left"><img src="#" alt="" data-src="holder.js/64x64/industrial"></a>
+		<a href="#" class="pull-left"><img src="#" alt="" data-src="holder.js/64x64/industrial/text:manager"></a>
 		<div class="media-body">
 			<div class="media-heading"><strong>Title</strong></div>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, id, tempore, quidem dignissimos exercitationem magnam eos cupiditate vero harum nemo similique perspiciatis dolorum temporibus quos culpa inventore facere cum soluta?</p>

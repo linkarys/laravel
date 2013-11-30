@@ -59,7 +59,7 @@
 				<li><a href="#">Another action</a></li>
 				<li><a href="#">Something else here</a></li>
 				<li class="divider"></li>
-				<li><a href="#">Separated link</a></li>
+				<li><a href="{{route('sunshine.index')}}">Separated link</a></li>
 				<li class="divider"></li>
 				<li><a href="#">One more separated link</a></li>
 			</ul>
@@ -148,20 +148,19 @@
 		@yield('content')
 	</div>
 
-	<div class="footer text-right">
-		<address>
-			<strong>linkary</strong><br>
-			12345678<br>
-			Qingdao, Shangdong<br>
-			266-7345011<br>
-		</address>
-		<address>
-			<strong>Full Name</strong><br>
-			<a href="mailto:linkarys@gmail.com">linkarys@gmail.com</a>
-		</address>
-	</div>
-
 	@section('footer')
+		<footer class="footer text-right well ">
+			<address>
+				<strong>linkary</strong><br>
+				12345678<br>
+				Qingdao, Shangdong<br>
+				266-7345011<br>
+			</address>
+			<address>
+				<strong>Full Name</strong><br>
+				<a href="mailto:linkarys@gmail.com">linkarys@gmail.com</a>
+			</address>
+		</footer>
 	@show
 </body>
 </html>

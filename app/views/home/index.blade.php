@@ -294,5 +294,6 @@
 @stop
 
 @section('footer')
+	@parent
 	{{ HTML::script('js/main.js')}}
 @stop
