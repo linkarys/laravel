@@ -7,8 +7,8 @@
 
 	{{ HTML::style('packages/bootstrap/css/bootstrap.min.css') }}
 	{{ HTML::style('css/main.less', array('rel'=>'stylesheet/less'))}}
-	{{ HTML::script('js/jquery-1.10.2.min.js')}}
 	{{ HTML::script('js/less-1.5.0.min.js')}}
+	{{ HTML::script('js/jquery-1.10.2.min.js')}}
 	{{ HTML::script('packages/bootstrap/js/bootstrap.min.js')}}
 	{{ HTML::script('packages/holder/holder.js')}}
 

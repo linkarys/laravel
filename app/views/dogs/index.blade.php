@@ -5,30 +5,30 @@
 @stop
 
 @section('content')
-	<ul class="nav nav-pills">
-		<li class="active">
-			<a href="#">Dogs<span class="badge pull-right"></span></a>
-		</li>
-	</ul>
 
-	<table class="table table-responsive table-hover table-striped table-condensed">
-		<thead>
-			<tr>
-				<th>Name</th>
-				<th>Age</th>
-				<th>Last Updated</th>
-			</tr>
-		</thead>
-		<tbody>
-		@foreach($dogs as $dog)
-			<tr>
-				<td><a href="{{route('dogs.show', $dog->id)}}">{{ $dog->name }}</a></td>
-				<td>{{ $dog->age }}</td>
-				<td>{{ $dog->updated_at }}</td>
-			</tr>
-		@endforeach
-		</tbody>
-	</table>
+
+	<div class="panel panel-default">
+		<div class="panel-heading text-center"><strong>Dogs list</strong></div>
+		<table class="table table-responsive table-hover table-striped table-condensed">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+					<th>Last Updated</th>
+				</tr>
+			</thead>
+			<tbody>
+			@foreach($dogs as $dog)
+				<tr>
+					<td><a href="{{route('dogs.show', $dog->id)}}">{{ $dog->name }}</a></td>
+					<td>{{ $dog->age }}</td>
+					<td>{{ $dog->updated_at }}</td>
+				</tr>
+			@endforeach
+			</tbody>
+		</table>
+	</div>
+
 	<ul class="pagination">
 		<li><a href="#">&laquo;</a></li>
 		<li><a href="#">1</a></li>
@@ -59,15 +59,54 @@
 		<span class="label label-warning">warning</span>
 		<span class="label label-danger">warning</span>
 	</div>
+	<br>
+	<a href="#" data-toggle="tooltip" title="first tooltip">Hover over me</a>
 
-	<a href="#">Inbox</a><span class="badge">42</span>
-	<ul class="nav nav-pills nav-stacked">
-	  <li class="active">
-	    <a href="#">
-	      <span class="badge pull-right">42</span>
-	      Home
-	    </a>
-	  </li>
-	  ...
-	</ul>
+	<div class="tooltip">
+	  <div class="tooltip-inner">
+	    Tooltip!
+	  </div>
+	  <div class="tooltip-arrow"></div>
+	</div>
+	<button type="button" class="btn btn-primary" data-toggle="button" data-loading-text="正在加载..." >Single toggle</button>
+	<br><br>
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carousel-0" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-1" data-slide-to="1"></li>
+			<li data-target="#carousel-2" data-slide-to="2"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="" alt="" data-src="holder.js/1200x300" class="img-responsive">
+				<div class="carousel-caption">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ut, veritatis ad omnis in eius molestias similique minus neque quasi provident hic nisi voluptatum accusantium et repellendus natus reiciendis soluta.
+				</div>
+			</div>
+			<div class="item">
+				<img src="" alt="" data-src="holder.js/1200x300" class="img-responsive">
+				<div class="carousel-caption">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ut, veritatis ad omnis in eius molestias similique minus neque quasi provident hic nisi voluptatum accusantium et repellendus natus reiciendis soluta.
+				</div>
+			</div>
+			<div class="item">
+				<img src="" alt="" data-src="holder.js/1200x300" class="img-responsive">
+				<div class="carousel-caption">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ut, veritatis ad omnis in eius molestias similique minus neque quasi provident hic nisi voluptatum accusantium et repellendus natus reiciendis soluta.
+				</div>
+			</div>
+		</div>
+
+		<!-- Controls -->
+		<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+
 @stop
