@@ -81,19 +81,19 @@
 		<!-- Wrapper for slides -->
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="" alt="" data-src="holder.js/1200x300" class="img-responsive">
+				<img src="" alt="" data-src="holder.js/1200x300/text:zhuxiaoya/auto">
 				<div class="carousel-caption">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ut, veritatis ad omnis in eius molestias similique minus neque quasi provident hic nisi voluptatum accusantium et repellendus natus reiciendis soluta.
 				</div>
 			</div>
 			<div class="item">
-				<img src="" alt="" data-src="holder.js/1200x300" class="img-responsive">
+				<img src="" alt="" data-src="holder.js/1200x300/text:zhuxiaoyang/auto">
 				<div class="carousel-caption">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ut, veritatis ad omnis in eius molestias similique minus neque quasi provident hic nisi voluptatum accusantium et repellendus natus reiciendis soluta.
 				</div>
 			</div>
 			<div class="item">
-				<img src="" alt="" data-src="holder.js/1200x300" class="img-responsive">
+				<img src="" alt="" data-src="holder.js/1200x300/auto">
 				<div class="carousel-caption">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, ut, veritatis ad omnis in eius molestias similique minus neque quasi provident hic nisi voluptatum accusantium et repellendus natus reiciendis soluta.
 				</div>
