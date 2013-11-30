@@ -333,22 +333,22 @@
 <div class="row">
 	<div class="col-sm-6 col-md-3">
 		<a href="#" class="thumbnail">
-			<img data-src="holder.js/300x200/gray" alt="">
+			<img data-src="holder.js/300x200/auto" alt="">
 		</a>
 	</div>
 	<div class="col-sm-6 col-md-3">
 		<a href="#" class="thumbnail">
-			<img data-src="holder.js/300x200/gray" alt="">
+			<img data-src="holder.js/300x200/auto" alt="">
 		</a>
 	</div>
 	<div class="col-sm-6 col-md-3">
 		<a href="#" class="thumbnail">
-			<img data-src="holder.js/300x200/gray" alt="">
+			<img data-src="holder.js/300x200/auto" alt="">
 		</a>
 	</div>
 	<div class="col-sm-6 col-md-3">
 		<a href="#" class="thumbnail">
-			<img data-src="holder.js/300x200/gray" alt="">
+			<img data-src="holder.js/300x200/auto" alt="">
 		</a>
 	</div>
 </div>
@@ -356,7 +356,7 @@
 <div class="row">
 	<div class="col-md-3 col-sm-6">
 		<div class="thumbnail">
-			<img src="" alt="" data-src="holder.js/300x200/sky">
+			<img src="" alt="" data-src="holder.js/100%x200/industrial/text:thumb">
 			<div class="caption">
 				<h3>Thumbnail label 3</h3>
 			</div>
@@ -366,7 +366,7 @@
 	</div>
 	<div class="col-md-3 col-sm-6">
 		<div class="thumbnail">
-			<img src="" alt="" data-src="holder.js/300x200/sky">
+			<img src="" alt="" data-src="holder.js/100%x200/industrial/text:thumb">
 			<div class="caption">
 				<h3>Thumbnail label 3</h3>
 			</div>
@@ -376,7 +376,7 @@
 	</div>
 	<div class="col-md-3 col-sm-6">
 		<div class="thumbnail">
-			<img src="" alt="" data-src="holder.js/300x200/sky">
+			<img src="" alt="" data-src="holder.js/100%x200/industrial/text:thumb">
 			<div class="caption">
 				<h3>Thumbnail label 3</h3>
 			</div>
@@ -386,7 +386,7 @@
 	</div>
 	<div class="col-md-3 col-sm-6">
 		<div class="thumbnail">
-			<img src="" alt="" data-src="holder.js/300x200/sky">
+			<img src="" alt="" data-src="holder.js/100%x200/industrial/text:thumb">
 			<div class="caption">
 				<h3>Thumbnail label 3</h3>
 			</div>
