@@ -9,7 +9,7 @@
 	{{ HTML::style('css/main.less', array('rel'=>'stylesheet/less'))}}
 	{{ HTML::script('js/jquery-1.10.2.min.js')}}
 	{{ HTML::script('js/less-1.5.0.min.js')}}
-	<!-- {{ HTML::script('packages/bootstrap/js/bootstrap.min.js')}} -->
+	{{ HTML::script('packages/bootstrap/js/bootstrap.min.js')}}
 
 	<!--[if lt IE 9]>
 		<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
@@ -34,7 +34,7 @@
 </head>
 <body data-spy="scroll" target="#nav-slide">
 	@section('nav')
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-default" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -72,9 +72,10 @@
 		</form>
 		<ul class="nav navbar-nav navbar-right">
 			@if(!Auth::check())
+				<!-- <li><a href="users/register"><button class="btn btn-default">Register</button></a></li> -->
 				<li>{{ HTML::link('users/register', 'Register') }}</li>
-				<!-- <li>{{ HTML::link('users/login', 'Login') }}</li> -->
-				<li><a href="#login-form" data-target="#login-form" data-toggle="modal">Login</a></li>
+				<li>{{ HTML::link('#login-form', 'Login', array('data-toggle'=>'modal', 'data-target'=>'#login-form')) }}</li>
+				<!-- <li><a href="#login-form" data-target="#login-form" data-toggle="modal">Login</a></li> -->
 			@else
 				<li>{{ HTML::link('users/logout', 'logout') }}</li>
 			@endif
@@ -97,15 +98,13 @@
 
 		<!-- login form -->
 		<div class="modal fade" id="login-form" tabindex="-1" role="dialog" aria-labelledby="modal-label" aria-hidden="true">
-			<div class="modal-dialog">
+			{{ Form::open(array('url'=>'users/signin', 'class'=>'form-signin form-horizontal modal-dialog')) }}
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<h4 class="modal-title" id="modal-label">Please Login</h4>
 					</div>
 					<div class="modal-body">
-						{{ Form::open(array('url'=>'users/signin', 'class'=>'form-signin form-horizontal')) }}
-
 						<div class="row">
 							<div class="form-group">
 								{{ Form::label('firstname', 'First Name:', array('class'=>'control-label col-md-3'))}}
@@ -137,15 +136,13 @@
 								</div>
 							</div>
 						</div>
-						{{ Form::close() }}
 					</div>
 					<div class="modal-footer">
 						{{ Form::button('Close', array('class'=>'btn btn-danger', 'data-dismiss'=>'modal'))}}
 						{{ Form::submit('Login', array('class'=>'btn btn-default btn-primary'))}}
-						{{ Form::close() }}
 					</div>
 				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
+			{{ Form::close() }}
 		</div>
 		@yield('content')
 	</div>

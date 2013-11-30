@@ -3,7 +3,10 @@
 
 
 @section('content')
-
+<ol class="breadcrumb">
+	<li><a href="#">Home</a></li>
+	<li class="active"><a href="#">Post</a></li>
+</ol>
 <div class="row">
 	<div class="col-md-8">
 		<ul class="nav nav-tabs">

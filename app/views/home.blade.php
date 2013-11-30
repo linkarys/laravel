@@ -31,7 +31,7 @@
 
 	<div class="col-md-10 col-xs-9">
 		<div data-spy="scroll" id="scroll-body" data-target="#nav-slide" data-offset="0" class="scrollspy-example">
-			<button class="btn btn-success btn-xs">small button</button>
+			<button class="btn btn-success btn-xs pull-right">button</button>
 
 			<dl class="dl-horizontal text-left">
 				<dt></dt>
