@@ -9,7 +9,7 @@
 	{{ HTML::style('css/main.less', array('rel'=>'stylesheet/less'))}}
 	{{ HTML::script('js/jquery-1.10.2.min.js')}}
 	{{ HTML::script('js/less-1.5.0.min.js')}}
-	{{ HTML::script('packages/bootstrap/js/bootstrap.min.js')}}
+	<!-- {{ HTML::script('packages/bootstrap/js/bootstrap.min.js')}} -->
 
 	<!--[if lt IE 9]>
 		<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
@@ -118,7 +118,6 @@
 								<div class="col-md-8">{{ Form::password('password', array('class'=>'form-control', 'placeholder'=>'Password')) }}</div>
 							</div>
 						</div>
-
 						<div class="row">
 							<div class="form-group">
 								<label for="" class="col-md-3 control-label">Remerber:</label>
@@ -138,9 +137,10 @@
 								</div>
 							</div>
 						</div>
-
+						{{ Form::close() }}
 					</div>
 					<div class="modal-footer">
+						{{ Form::button('Close', array('class'=>'btn btn-danger', 'data-dismiss'=>'modal'))}}
 						{{ Form::submit('Login', array('class'=>'btn btn-default btn-primary'))}}
 						{{ Form::close() }}
 					</div>
@@ -162,5 +162,8 @@
 			<a href="mailto:linkarys@gmail.com">linkarys@gmail.com</a>
 		</address>
 	</div>
+
+	@section('footer')
+	@show
 </body>
 </html>

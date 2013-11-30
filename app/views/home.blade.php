@@ -1,8 +1,5 @@
 @extends('layouts.master')
 
-@section('header')
-	{{ HTML::script('js/main.js')}}
-@stop
 @section('nav')
 	@parent
 @stop
@@ -11,32 +8,34 @@
 
 <h1 class="text-center text-primary">Home Page <small>@linkary<abbr title="love">\(^_^)-</abbr>zhuxiaoya</small></h1>
 
+
 <div class="row">
 	<nav id="nav-slide" class="col-md-2 visible-md visible-lg" role="navigation">
 		<!-- <div class="sidenav-wrap" data-spy="affix"> -->
 		<div class="wrap" data-spy="affix">
 			<ul class="nav nav-default nav-stacked main">
-				<li class=""><a href="#fat">fat</a></li>
+				<li class=""><a href="#fat">yaya</a></li>
 				<li class=""><a href="#mdo">mdo</a></li>
 				<li class="">
-					<a href="#one">one</a>
+					<a href="#one">form</a>
 					<ul class="sub nav nav-stacked ">
-						<li class=""><a href="#two">two</a></li>
-						<li class=""><a href="#three">three</a></li>
-						<li class=""><a href="#four">four</a></li>
+						<li class=""><a href="#form">form</a></li>
+						<li class=""><a href="#modal">modal</a></li>
+						<li class=""><a href="#icons">icons</a></li>
 					</ul>
 				</li>
-				<li class=""><a href="#five">five</a></li>
+				<li class=""><a href="#input-group">input</a></li>
 			</ul>
 		</div>
 	</nav>
+
 	<div class="col-md-10 col-xs-9">
 		<div data-spy="scroll" id="scroll-body" data-target="#nav-slide" data-offset="0" class="scrollspy-example">
 			<button class="btn btn-success btn-xs">small button</button>
 
 			<dl class="dl-horizontal text-left">
 				<dt></dt>
-				<dd><h4 id="fat">@zhuxiaoya</h4></dd>
+				<dd><h3 id="fat">@zhuxiaoya</h3></dd>
 				<dt></dt>
 				<dd><img src="img/lovenote.jpg" class="img-responsive img-rocunded" alt=""></dd>
 				<dt>Description</dt>
@@ -45,47 +44,169 @@
 				<dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, vel, harum voluptatibus ex enim asperiores ducimus repellendus porro aliquam nisi dolores quia adipisci sint fuga velit eum placeat sapiente delectus.</dd>
 			</dl>
 			<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
-			<h4 id="mdo">@mdo</h4>
+			<h3 id="mdo">@mdo</h3>
 			<div class="alert fade in">
 				<button class="close" aria-hidden="true" data-dismiss="alert">&times;</button >
 				<p>Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua cupidatat mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.</p>
 			</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, delectus, iure, eligendi, ad voluptatum nam amet labore atque autem tenetur maxime voluptas veritatis dolor tempore repudiandae accusamus saepe quidem cum. Obcaecati, repellendus corporis aspernatur earum alias. Cumque, explicabo, hic distinctio ex ipsa aliquid magni minus placeat expedita eveniet id quaerat! Et, nesciunt, sit rem soluta consectetur architecto nihil repellat maiores esse illo tenetur vero praesentium corporis. Hic, quas, maxime vitae molestiae ea et sunt iste deleniti debitis reiciendis consectetur iure rem excepturi culpa unde asperiores provident id aut nobis recusandae in ab non doloribus tenetur voluptates temporibus fugit dolorum quo?</p>
+			<button data-toggle="buttons" id="trybtn" data-loading-text="loading.." class="btn btn-primary">load</button>
+			<h3 id="one" class="text-center">Form Area</h3>
+			<h4 id="form">form elements</h4>
+			<form action="">
+				<fieldset>
+					<legend>sex</legend>
+					<div class="form-group has-warning">
+						<div class="radio-inline"><label>male<input type="radio" name="sex" id=""></label></div>
+						<div class="radio-inline"><label>female<input type="radio" name="sex" id=""></label></div>
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>details</legend>
+					<div class="form-group has-success"><input type="text" placeholder="has-success" class="form-control"></div>
+					<div class="form-group has-warning"><input type="text" placeholder="has-warning" class="form-control"></div>
+					<div class="form-group has-error"><input type="text" placeholder="has-error" name="" class="form-control"></div>
+				</fieldset>
+				<fieldset disabled>
+					<legend>more - disabled</legend>
+					<div class="form-group has-info"><input type="text" placeholder="has-info" class="form-control"></div>
+				</fieldset>
 
-			<button data-toggle="buttons" data-loading-text="loading.." class="btn btn-primary">load</button>
+			</form>
+			<h4 id="modal">modal</h4>
 
-			<button type="button" id="trybtn" data-loading-text="正在加载..." class="btn btn-primary">
-			  Loading state
-			</button>
-			<script>
-					$('#trybtn').click(function () {
-						var btn = $(this);
-						btn.button('loading');
-						setTimeout(function () {
-							btn.button('reset');
-						}, 3000)
-					});
-			</script>
-			<h4 id="one">one</h4>
-			<p>Occaecat commodo aliqua delectus. Fap craft beer deserunt skateboard ea. Lomo bicycle rights adipisicing banh mi, velit ea sunt next level locavore single-origin coffee in magna veniam. High life id vinyl, echo park consequat quis aliquip banh mi pitchfork. Vero VHS est adipisicing. Consectetur nisi DIY minim messenger bag. Cred ex in, sustainable delectus consectetur fanny pack iphone.</p>
-			<h4 id="two">two</h4>
-			<p>In incididunt echo park, officia deserunt mcsweeney's proident master cleanse thundercats sapiente veniam. Excepteur VHS elit, proident shoreditch +1 biodiesel laborum craft beer. Single-origin coffee wayfarers irure four loko, cupidatat terry richardson master cleanse. Assumenda you probably haven't heard of them art party fanny pack, tattooed nulla cardigan tempor ad. Proident wolf nesciunt sartorial keffiyeh eu banh mi sustainable. Elit wolf voluptate, lo-fi ea portland before they sold out four loko. Locavore enim nostrud mlkshk brooklyn nesciunt.</p>
-			<h4 id="three">three</h4>
-			<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+			<button class="btn btn-success" data-toggle="modal" data-target="#md-example">md example</button>
+			<div class="modal fade" id="md-example" tabindex="-1" role="dialog" aria-labelledby="md-example-label" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="md-example-label">Modal title</h4>
+						</div>
+						<div class="modal-body">
+							something very good
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-danger" data-dismiss="modal">close</button>
+							<button class="btn btn-default">show</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="center-block btn btn-info">center block</button>
+			<a href="#" class="btn btn-default btn-primary" role="button">Link Button</a>
+			<p class="center-block">Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
 			<p>Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id assumenda. Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat hoodie gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson proident brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer seitan readymade velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco thundercats. </p>
-			<h4 id="four">four</h4>
-			<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
+			<h4 id="icons">icons</h4>
+			<div>
+				<div class="btn-toolbar">
+					<div class="btn-group btn-group-sm">
+						<button class="btn btn-default"><span class="glyphicon glyphicon-th"></span></button>
+						<button class="btn btn-default"><span class="glyphicon glyphicon-th-list"></span></button>
+					</div>
+					<div class="btn-group btn-group-sm">
+						<button class="btn btn-default"><span class="glyphicon glyphicon-refresh"></span></button>
+						<button class="btn btn-default"><span class="glyphicon glyphicon-remove"></span></button>
+						<button class="btn btn-default"><span class="glyphicon glyphicon-trash"></span></button>
+					</div>
+					<div class="btn-group btn-group-sm">
+						<button class="btn btn-default">1</button><button class="btn btn-default">2</button>
+						<button class="btn btn-default">Dropdown</button>
+						<button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Dropdown link</a></li>
+							<li><a href="#">Dropdown link</a></li>
+						</ul>
+					</div>
+					<div class="btn-group btn-group-sm">
+						<button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Info<span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+						</ul>
+					</div>
+
+					<div class="btn-group btn-group-sm dropup">
+						<button class="btn btn-default">drop up</button>
+						<button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+						</ul>
+					</div>
+				</div>
+			</div><br/>
+			<h4>justified link button</h4>
+			<div class="btn-group btn-group-justified">
+				<a class="btn btn-default">left</a>
+				<a class="btn btn-default">middle</a>
+				<a class="btn btn-default">right</a>
+			</div><br/>
 			<p>Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id assumenda. Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat hoodie gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson proident brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer seitan readymade velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco thundercats. </p>
-			<h4 id="five">five</h4>
-			<p>Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.</p>
-			<p>Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id assumenda. Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat hoodie gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson proident brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer seitan readymade velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco thundercats. </p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, commodi, ex rerum iusto et cum labore recusandae obcaecati atque deleniti alias porro eaque quod veritatis necessitatibus perferendis odio ullam nobis ducimus cupiditate saepe reiciendis minima sed molestiae id perspiciatis corporis tempore asperiores ea sit temporibus sint aliquam hic. Minima, perspiciatis officiis accusantium nihil ad nemo. Dignissimos, repudiandae, molestiae quidem doloribus animi nihil iste a ipsa ullam deserunt vitae nulla nobis reprehenderit fugit reiciendis voluptate atque. Reprehenderit, porro, aspernatur, hic, ipsam repellendus suscipit aut dignissimos accusantium adipisci eius sunt obcaecati labore officiis natus itaque quos nihil minima quo saepe iste facilis!</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, dolorum, aliquam eius id cum amet itaque reprehenderit beatae soluta a dicta at corporis ab excepturi et minus dolor pariatur accusantium doloribus assumenda obcaecati nulla reiciendis aut architecto possimus impedit esse ratione. Molestiae, consequuntur laborum aspernatur dolor ipsa labore repudiandae sapiente iusto quia vero! Itaque, nihil autem nesciunt quos doloribus quo tenetur modi porro odio labore cupiditate eligendi harum facilis deserunt commodi molestiae dignissimos deleniti fugiat voluptates incidunt quibusdam esse sapiente repellat sint odit ducimus voluptatum vel! Pariatur, odio, non amet natus dolorem quasi provident cum maxime. Dignissimos, voluptatem nostrum impedit!</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, aperiam, quasi illum necessitatibus iusto quibusdam natus aliquid dicta voluptas amet repellendus architecto. Qui modi neque quisquam rerum? Nam, a, nisi, aperiam eligendi libero vitae at ratione tempore sit eaque ipsam voluptas non voluptatibus itaque facere magni excepturi repudiandae suscipit soluta sint eos et tempora reiciendis perferendis ea. Harum, consequuntur labore voluptate distinctio ipsam atque eaque temporibus ex similique ab optio sapiente ad at quaerat fuga voluptatum culpa laboriosam maxime reprehenderit expedita soluta aperiam deserunt tempore nihil quos assumenda non veniam aut laborum a! Laboriosam, veritatis, iste iure est delectus dicta pariatur dolor. Consequuntur, vel, non illum corporis incidunt eius natus in explicabo accusantium modi soluta deleniti sed nulla reprehenderit ratione atque dicta quod unde ducimus alias dolore voluptatibus obcaecati. Illum, temporibus, id, assumenda ex minima quo aut voluptas quam totam nostrum sit rem cumque nulla quasi corrupti qui officia consectetur quibusdam quod facilis. A, ipsum, fuga, culpa excepturi doloribus dicta labore laudantium delectus assumenda sed nam cumque nulla atque facilis sunt nihil obcaecati ea repellat dignissimos reprehenderit quia quasi nisi neque consequuntur quaerat doloremque recusandae ipsa odio omnis modi reiciendis pariatur ad sint laborum optio officiis corrupti! Numquam, sunt, deserunt distinctio ducimus libero consectetur laboriosam perferendis doloribus beatae magni earum cumque placeat sit soluta dolor debitis sed cum ullam voluptas quaerat aut eveniet quam modi maiores ex natus odio error id cupiditate sint! Dolor, incidunt, fugiat ipsum unde porro ad labore harum animi beatae velit architecto laboriosam a blanditiis nobis expedita corporis error sapiente quod consectetur numquam assumenda alias necessitatibus autem vel et nisi repudiandae doloribus deserunt officiis vitae itaque rerum possimus mollitia aliquam eos minus accusamus optio. Facere, possimus, doloremque et ipsa quisquam at fugit voluptas laboriosam laudantium nulla atque explicabo consequuntur sed odio odit minima quos repudiandae harum!</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, reprehenderit, mollitia fugit possimus eius quia deserunt eveniet modi eum beatae? Iusto, porro, ab, neque libero quam nihil consequatur consequuntur cum facilis labore sunt necessitatibus veritatis beatae doloribus voluptas est suscipit enim doloremque inventore fugit dolorem sit eveniet hic deserunt nisi molestias nam voluptatibus fuga velit culpa repellat ipsa sed reiciendis! Ullam, porro, iusto, repudiandae sint reiciendis libero quasi vel delectus odit labore consequuntur adipisci illo doloribus aperiam nihil perferendis dolorem beatae error quis pariatur nam necessitatibus obcaecati! Rem, ullam, dolores, eos, neque numquam consequatur corporis libero nulla doloremque blanditiis delectus voluptates perferendis magni rerum harum et inventore provident possimus enim sed! Culpa, voluptatum, vero, omnis soluta incidunt aut deleniti voluptates reprehenderit laborum eius tenetur ratione consectetur at facilis pariatur eos et natus eum magni hic corporis ad ullam iusto voluptas debitis itaque expedita. Nostrum, cupiditate pariatur culpa eum aspernatur perferendis assumenda! Eligendi, facilis, sequi aliquam est quasi eos nisi non maiores incidunt ipsum ut suscipit perferendis nulla odit molestias. Illo, saepe, ex id error commodi reiciendis enim aliquid ipsam! Enim, deleniti, quos, minus veritatis blanditiis suscipit quasi incidunt fuga amet iusto cumque quia harum reiciendis dolorum voluptates itaque debitis! Ipsam!</p>
+			<h3 id="input-group">input group</h3>
+			<form action="" class="form-horizontal">
+				<div class="input-group">
+					<span class="input-group-addon">@</span>
+					<input type="text" class="form-control" placeholder="username">
+				</div><br/>
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="money">
+					<span class="input-group-addon">.00</span>
+				</div><br/>
+				<div class="input-group">
+					<span class="input-group-addon">$</span>
+					<input type="text" class="form-control" placeholder="money - us">
+					<span class="input-group-addon" >.00</span>
+				</div><br/>
+				<filedset>
+					<div class="input-group">
+						<span class="input-group-btn">
+							<button class="btn btn-default">Go!</button>
+						</span>
+						<input type="text" class="form-control">
+					</div><br/>
+					<div class="input-group">
+						<input type="text" name="get-money" class="form-control">
+						<span class="input-group-btn">
+							<button class="btn btn-default">go!</button>
+						</span>
+					</div><br/>
+					<div class="input-group">
+						<input type="text" class="form-control">
+						<div class="input-group-btn">
+							<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li class="divider"></li>
+								<li><a href="#">4</a></li>
+							</ul>
+						</div>
+					</div><br/>
+					<div class="input-group">
+						<div class="input-group-btn">
+							<button class="btn btn-default">Action</button>
+							<button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+							<ul class="dropdown-menu">
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li class="divider"></li>
+								<li><a href="#">link</a></li>
+							</ul>
+						</div>
+						<input type="text" class="form-control">
+					</div>
+				</filedset>
+			</form>
 		</div>
 	</div>
 </div>
-<script>
+@stop
 
-</script>
+@section('footer')
+	{{ HTML::script('js/main.js')}}
 @stop
