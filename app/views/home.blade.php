@@ -6,9 +6,10 @@
 
 @section('content')
 
-<h1 class="text-center text-primary">Home Page <small>@linkary<abbr title="love">\(^_^)-</abbr>zhuxiaoya</small></h1>
 
-
+<div class="jumbotron">
+	<h1 class="text-center text-primary">Home Page <small>@linkary<abbr title="love">\(^_^)-</abbr>zhuxiaoya</small></h1>
+</div>
 <div class="row">
 	<nav id="nav-slide" class="col-md-2 visible-md visible-lg" role="navigation">
 		<!-- <div class="sidenav-wrap" data-spy="affix"> -->
@@ -100,9 +101,15 @@
 			<h4 id="icons">icons</h4>
 			<div>
 				<div class="btn-toolbar">
-					<div class="btn-group btn-group-sm">
-						<button class="btn btn-default"><span class="glyphicon glyphicon-th"></span></button>
-						<button class="btn btn-default"><span class="glyphicon glyphicon-th-list"></span></button>
+					<div class="btn-group btn-group-sm" data-toggle="buttons">
+						<label class="btn btn-default">
+							<input type="radio" name="view-type" value="block">
+							<span class="glyphicon glyphicon-th" />
+						</label>
+						<label class="btn btn-default">
+							<input type="radio" name="view-type" value="list">
+							<span class="glyphicon glyphicon-th-list" />
+						</label>
 					</div>
 					<div class="btn-group btn-group-sm">
 						<button class="btn btn-default"><span class="glyphicon glyphicon-refresh"></span></button>
