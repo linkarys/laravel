@@ -13,7 +13,7 @@
 <div class="row">
 	<nav id="nav-slide" class="col-md-2 visible-md visible-lg" role="navigation">
 		<!-- <div class="sidenav-wrap" data-spy="affix"> -->
-		<div class="wrap" data-spy="affix">
+		<div class="wrap home-sidebar">
 			<ul class="nav nav-default nav-stacked main">
 				<li class=""><a href="#fat">yaya</a></li>
 				<li class=""><a href="#mdo">mdo</a></li>
@@ -28,6 +28,43 @@
 				<li class=""><a href="#input-group">input</a></li>
 			</ul>
 		</div>
+		<script>
+
+			var $window = $(window)
+			var $body   = $(document.body)
+
+			var navHeight = $('.main-nav-bar').outerHeight(true) + 10
+
+			$body.scrollspy({
+				target: '.home-sidebar',
+				offset: navHeight
+			})
+
+			$window.on('load', function () {
+				$body.scrollspy('refresh')
+			})
+
+
+			setTimeout(function () {
+
+				var $sideBar = $('.home-sidebar')
+
+				$sideBar.affix({
+					offset: {
+						top: function () {
+							var offsetTop      = $sideBar.offset().top
+							var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
+							var navOuterHeight = $('.main-nav-bar').height()
+
+							return (this.top = offsetTop - navOuterHeight - sideBarMargin) + 50
+						}
+						, bottom: function () {
+							return (this.bottom = $('.footer').outerHeight(true))
+						}
+					}
+				})
+			}, 100)
+		</script>
 	</nav>
 
 	<div class="col-md-10 col-xs-9">
@@ -208,7 +245,51 @@
 						<input type="text" class="form-control">
 					</div>
 				</filedset>
-			</form>
+			</form><br>
+
+			<!-- thumbnails -->
+			<div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="thumbnail">
+						<img src="" alt="" data-src="holder.js/300x200/gray">
+						<div class="caption">
+							<h3>Title</h3>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore nulla quos voluptate minima quis? Cum, nulla rem ad porro at.</p>
+						<p><a href="#" class="btn btn-primary">button</a> <a href="#" class="btn btn-primary">button</a></p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="thumbnail">
+						<img src="" alt="" data-src="holder.js/300x200/social">
+						<div class="caption">
+							<h3>Title</h3>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore nulla quos voluptate minima quis? Cum, nulla rem ad porro at.</p>
+						<p><a href="#" class="btn btn-primary">button</a> <a href="#" class="btn btn-primary">button</a></p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="thumbnail">
+						<img src="" alt="" data-src="holder.js/300x200/industrial">
+						<div class="caption">
+							<h3>Title</h3>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore nulla quos voluptate minima quis? Cum, nulla rem ad porro at.</p>
+						<p><a href="#" class="btn btn-primary">button</a> <a href="#" class="btn btn-primary">button</a></p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="thumbnail">
+						<img src="" alt="" data-src="holder.js/300x200/lava">
+						<div class="caption">
+							<h3>Title</h3>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore nulla quos voluptate minima quis? Cum, nulla rem ad porro at.</p>
+						<p><a href="#" class="btn btn-primary">button</a> <a href="#" class="btn btn-primary">button</a></p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

@@ -10,6 +10,7 @@
 	{{ HTML::script('js/jquery-1.10.2.min.js')}}
 	{{ HTML::script('js/less-1.5.0.min.js')}}
 	{{ HTML::script('packages/bootstrap/js/bootstrap.min.js')}}
+	{{ HTML::script('packages/holder/holder.js')}}
 
 	<!--[if lt IE 9]>
 		<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
@@ -34,7 +35,7 @@
 </head>
 <body data-spy="scroll" target="#nav-slide">
 	@section('nav')
-	<nav class="navbar navbar-default navbar-static-top" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top main-nav-bar" role="navigation">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
