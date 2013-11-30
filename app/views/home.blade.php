@@ -6,13 +6,14 @@
 
 @section('content')
 
-<h1 class="text-center text-primary">Home Page <small>@linkary<abbr title="love">\(^_^)-</abbr>zhuxiaoya</small></h1>
 
-
+<div class="jumbotron">
+	<h1 class="text-center text-primary">Home Page <small>@linkary<abbr title="love">\(^_^)-</abbr>zhuxiaoya</small></h1>
+</div>
 <div class="row">
 	<nav id="nav-slide" class="col-md-2 visible-md visible-lg" role="navigation">
 		<!-- <div class="sidenav-wrap" data-spy="affix"> -->
-		<div class="wrap" data-spy="affix">
+		<div class="wrap home-sidebar">
 			<ul class="nav nav-default nav-stacked main">
 				<li class=""><a href="#fat">yaya</a></li>
 				<li class=""><a href="#mdo">mdo</a></li>
@@ -27,6 +28,43 @@
 				<li class=""><a href="#input-group">input</a></li>
 			</ul>
 		</div>
+		<script>
+
+			var $window = $(window)
+			var $body   = $(document.body)
+
+			var navHeight = $('.main-nav-bar').outerHeight(true) + 10
+
+			$body.scrollspy({
+				target: '.home-sidebar',
+				offset: navHeight
+			})
+
+			$window.on('load', function () {
+				$body.scrollspy('refresh')
+			})
+
+
+			setTimeout(function () {
+
+				var $sideBar = $('.home-sidebar')
+
+				$sideBar.affix({
+					offset: {
+						top: function () {
+							var offsetTop      = $sideBar.offset().top
+							var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
+							var navOuterHeight = $('.main-nav-bar').height()
+
+							return (this.top = offsetTop - navOuterHeight - sideBarMargin) + 50
+						}
+						, bottom: function () {
+							return (this.bottom = $('.footer').outerHeight(true))
+						}
+					}
+				})
+			}, 100)
+		</script>
 	</nav>
 
 	<div class="col-md-10 col-xs-9">
@@ -100,9 +138,15 @@
 			<h4 id="icons">icons</h4>
 			<div>
 				<div class="btn-toolbar">
-					<div class="btn-group btn-group-sm">
-						<button class="btn btn-default"><span class="glyphicon glyphicon-th"></span></button>
-						<button class="btn btn-default"><span class="glyphicon glyphicon-th-list"></span></button>
+					<div class="btn-group btn-group-sm" data-toggle="buttons">
+						<label class="btn btn-default">
+							<input type="radio" name="view-type" value="block">
+							<span class="glyphicon glyphicon-th" />
+						</label>
+						<label class="btn btn-default">
+							<input type="radio" name="view-type" value="list">
+							<span class="glyphicon glyphicon-th-list" />
+						</label>
 					</div>
 					<div class="btn-group btn-group-sm">
 						<button class="btn btn-default"><span class="glyphicon glyphicon-refresh"></span></button>
@@ -201,7 +245,51 @@
 						<input type="text" class="form-control">
 					</div>
 				</filedset>
-			</form>
+			</form><br>
+
+			<!-- thumbnails -->
+			<div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="thumbnail">
+						<img src="" alt="" data-src="holder.js/300x200/gray">
+						<div class="caption">
+							<h3>Title</h3>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore nulla quos voluptate minima quis? Cum, nulla rem ad porro at.</p>
+						<p><a href="#" class="btn btn-primary">button</a> <a href="#" class="btn btn-primary">button</a></p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="thumbnail">
+						<img src="" alt="" data-src="holder.js/300x200/social">
+						<div class="caption">
+							<h3>Title</h3>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore nulla quos voluptate minima quis? Cum, nulla rem ad porro at.</p>
+						<p><a href="#" class="btn btn-primary">button</a> <a href="#" class="btn btn-primary">button</a></p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="thumbnail">
+						<img src="" alt="" data-src="holder.js/300x200/industrial">
+						<div class="caption">
+							<h3>Title</h3>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore nulla quos voluptate minima quis? Cum, nulla rem ad porro at.</p>
+						<p><a href="#" class="btn btn-primary">button</a> <a href="#" class="btn btn-primary">button</a></p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="thumbnail">
+						<img src="" alt="" data-src="holder.js/300x200/lava">
+						<div class="caption">
+							<h3>Title</h3>
+						</div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore nulla quos voluptate minima quis? Cum, nulla rem ad porro at.</p>
+						<p><a href="#" class="btn btn-primary">button</a> <a href="#" class="btn btn-primary">button</a></p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
