@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('header')
+	{{ HTML::script('js/d3.v3.min.js')}}
+@stop
+
 @section('content')
 
 <ol class="breadcrumb">
