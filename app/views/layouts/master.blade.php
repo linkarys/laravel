@@ -7,15 +7,22 @@
 
 	{{ HTML::style('packages/bootstrap/css/bootstrap.min.css') }}
 	{{ HTML::style('css/main.less', array('rel'=>'stylesheet/less'))}}
-	{{ HTML::script('js/less-1.5.0.min.js')}}
 	{{ HTML::script('js/jquery-1.10.2.min.js')}}
-	{{ HTML::script('packages/bootstrap/js/bootstrap.min.js')}}
 	{{ HTML::script('packages/holder/holder.js')}}
 
 	<!--[if lt IE 9]>
 		<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
 		<script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
 	<![endif]-->
+
+
+
+	@section('header')
+
+	@show
+
+	{{ HTML::script('js/less-1.5.0.min.js')}}
+	{{ HTML::script('packages/bootstrap/js/bootstrap.min.js')}}
 
 	<script>
 		less = {
@@ -29,9 +36,6 @@
 				relativeUrls: false				// whether to adjust url's to be relative if false, url's are already relative to the entry less file
 			};
 	</script>
-
-	@section('header')
-	@show
 </head>
 <body data-spy="scroll" target="#nav-slide">
 	@section('nav')
