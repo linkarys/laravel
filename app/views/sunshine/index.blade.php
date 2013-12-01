@@ -30,28 +30,24 @@
 
 <script>
 
-	// d3.select("#chart-gas").selectAll("p")
-	// .data([4, 8, 15, 16, 23, 42])
-	// .enter().append("p")
-	// .text(function(d) { return "I’m number " + d + "!"; });
 	var data = [4, 8, 15, 16, 23, 42];
-	d3.select('#chart-summary').selectAll()
-	.data(data)
-	.enter().append('p')
-	.style('height', '20px')
-	.style('width', 0)
-	.transition()
-	.style({
-		width: function(d) {
-			return d + '%'
-		},
-		color: function(d) {
-			return 'hsl(' + Math.random() * 360 + ', 100%, 50%)';
-		},
-		'background-color': function() {
-			return 'hsl(' + Math.random() * 360 + ', 100%, 50%)';
-		}
-	})
+	// d3.select('#chart-summary').selectAll()
+	// .data(data)
+	// .enter().append('p')
+	// .style('height', '20px')
+	// .style('width', 0)
+	// .transition()
+	// .style({
+	// 	width: function(d) {
+	// 		return d + '%'
+	// 	},
+	// 	color: function(d) {
+	// 		return 'hsl(' + Math.random() * 360 + ', 100%, 50%)';
+	// 	},
+	// 	'background-color': function() {
+	// 		return 'hsl(' + Math.random() * 360 + ', 100%, 50%)';
+	// 	}
+	// })
 
 	var width = 400;
 	var height = 20;
