@@ -23,6 +23,18 @@
 
 <h2 class="head-link" data-href="#summary">概览</h2>
 <div id="chart-summary">
+	<div class="nav-toolbar pull-right">
+		<div class="btn-group btn-group-sm" data-toggle="buttons">
+			<label class="btn btn-default  active">
+				<input type="radio" name="chart-type" value="bar">
+				<span class="glyphicon glyphicon-barcode"></span>
+			</label>
+			<label class="btn btn-default">
+				<input type="radio" name="chart-type" value="pie">
+				<span class="glyphicon glyphicon-ok-circle"></span>
+			</label>
+		</div>
+	</div>
 	<svg class="chart" viewBox="0 0 960 500" preserveAspectRatio="xMidYMid"></svg>
 </div>
 <!-- <svg id="svg"></svg> -->
@@ -142,7 +154,7 @@ chart.selectAll('.bar')
 	var aspect = width / height,
 
 	chart = $(".chart");
-	$(window).on("resize", function() {
+	$(window).on("resize load", function() {
 		var targetWidth = chart.parent().width();
 		chart.attr("width", targetWidth);
 		chart.attr("height", targetWidth / aspect);
