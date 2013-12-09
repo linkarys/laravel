@@ -60,7 +60,7 @@
 			<a href="#" class="dropdown-toggle">More Action <b class="caret"></b></a>
 			<ul class="dropdown-menu">
 				<li><a href="{{route('dogs.index')}}">Dogs</a></li>
-				<li><a href="{{merry.index}}{">Merry Christmas Eve</a></li>
+				<li><a href="{{route('merry.index')}}">Merry Christmas Eve</a></li>
 				<li><a href="#">Something else here</a></li>
 				<li class="divider"></li>
 				<li><a href="{{route('sunshine.index')}}">Separated link</a></li>

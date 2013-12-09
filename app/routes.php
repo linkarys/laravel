@@ -39,6 +39,8 @@ Route::resource('posts', 'PostsController');
 
 Route::resource('dogs', 'DogsController');
 
+Route::resource('merry', 'MerryController');
+
 Route::resource('/', 'HomeController');
 
 Route::resource('sunshine', 'Sunshine');
