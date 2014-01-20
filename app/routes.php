@@ -31,11 +31,18 @@ Route::get('debug', function() {
 // })
 // ->where('name', '\w+');
 
+Route::resource('home', 'HomeController');
+
 Route::controller('users', 'UsersController');
 
 Route::resource('posts', 'PostsController');
 
 Route::resource('dogs', 'DogsController');
 
+Route::resource('merry', 'MerryController');
+
 Route::resource('/', 'HomeController');
-Route::resource('home', 'HomeController');
+
+Route::resource('sunshine', 'Sunshine');
+
+Route::resource('grudens', 'GrudensController');

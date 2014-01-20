@@ -16,10 +16,22 @@ class HomeController extends BaseController {
 	*/
 	protected $layout = 'layouts.master';
 
+	// protected $video;
 
+	// public function __construct(Gruden $video)
+	// {
+	// 	$this->video = $video;
+	// }
+
+	/**
+	 * Display a listing of the resource.
+	 *
+	 * @return Response
+	 */
 	public function index()
 	{
-		return $this->layout->content = View::make('home');
+
+		$this->layout->content =  View::make('home.index');
 	}
 
 }

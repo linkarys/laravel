@@ -2,6 +2,8 @@
 
 class PostsController extends BaseController {
 
+	protected $layout = 'layouts.master';
+	
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -9,8 +11,10 @@ class PostsController extends BaseController {
 	 */
 	public function index()
 	{
-        return View::make('posts.index')
-        	->with('post', Post::all());
+
+		dd(DB::select('select * from wp_posts'));
+		$this->layout->content = View::make('posts.index')
+			->with('post', Post::all());
 	}
 
 	/**
@@ -20,7 +24,7 @@ class PostsController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('posts.create');
+		$this->layout->content = View::make('posts.create');
 	}
 
 	/**
@@ -41,7 +45,7 @@ class PostsController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('posts.show');
+		$this->layout->content = View::make('posts.show');
 	}
 
 	/**
@@ -52,7 +56,7 @@ class PostsController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('posts.edit');
+		$this->layout->content = View::make('posts.edit');
 	}
 
 	/**
