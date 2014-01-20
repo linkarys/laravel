@@ -1,0 +1,135 @@
+body {
+	padding-top: 56px;
+}
+
+ul {
+	transition: 0.2s;
+}
+
+.container {
+	margin: 10px auto;
+	clear: both;
+	min-height: 500px;
+}
+
+/**
+ * Navigation Bat
+ * ----------------------------------------------------------------------------
+ */
+
+.dropdown {
+	&:hover {
+		> .dropdown-menu {
+			display: block;
+		}
+
+		.caret {
+			transform: rotate(0deg);
+			-webkit-transform: rotate(0deg);
+		}
+	}
+	.caret {
+		transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
+	}
+}
+
+/**
+ * Slide
+ * ----------------------------------------------------------------------------
+ */
+
+
+#nav-slide {
+	> .wrap {
+		background-color: #efefef;
+		border-radius: 6px;
+		padding: 10px 0;
+		width: 148px;
+	}
+
+	.sub {
+		// list-style: none;
+		display: none;
+		padding-left: 25px;
+	}
+
+	a {
+		color: #716b7a;
+		padding: 5px 15px;
+		margin-right: 2px;
+		&:hover {
+			color: #333;
+		}
+	}
+
+	.active {
+		> a {
+			color: #000;
+			font-weight: bold;
+			border-right: 1px solid steelblue;
+		}
+		> .sub {
+			display: block;
+		}
+	}
+}
+
+.home-sidebar.affix {
+	position: fixed;
+	top: 70px;
+}
+
+.nav-pull-right {
+	> li {
+		float: right;
+	}
+}
+
+/**
+ * Shared
+ * ----------------------------------------------------------------------------
+ */
+
+p {
+	&:nth-child(odd) {
+		// background-color: #fefefe;
+	}
+	&:nth-child(even) {
+		// background-color: #efefef;
+	}
+}
+
+
+/**
+ * Footer
+ * ----------------------------------------------------------------------------
+ */
+
+.footer {
+	margin-bottom: 0;
+}
+
+
+/**
+ * sunshine
+ * ----------------------------------------------------------------------------
+ */
+
+
+.jumbotron-header {
+	font-weight: bold;
+}
+
+.head-link {
+	> a {
+		text-decoration: none;
+		display: none;
+	}
+	&:hover {
+		> a {
+			display: inline;
+		}
+	}
+}
+

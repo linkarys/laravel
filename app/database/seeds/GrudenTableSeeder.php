@@ -1,0 +1,18 @@
+<?php
+
+class GrudenTableSeeder extends Seeder {
+
+	public function run()
+	{
+		// Uncomment the below to wipe the table clean before populating
+		// DB::table('gruden')->truncate();
+
+		$gruden = array(
+
+		);
+
+		// Uncomment the below to run the seeder
+		// DB::table('gruden')->insert($gruden);
+	}
+
+}
