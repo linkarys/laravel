@@ -46,3 +46,4 @@ Route::resource('/', 'HomeController');
 Route::resource('sunshine', 'Sunshine');
 
 Route::resource('grudens', 'GrudensController');
+

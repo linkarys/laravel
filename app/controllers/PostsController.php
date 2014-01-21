@@ -12,7 +12,7 @@ class PostsController extends BaseController {
 	public function index()
 	{
 
-		dd(DB::select('select * from wp_posts'));
+		// dd(DB::select('select * from wp_posts'));
 		$this->layout->content = View::make('posts.index')
 			->with('post', Post::all());
 	}

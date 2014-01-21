@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.0.*",
 		"twitter/bootstrap": "*",
-		"way/generators": "1.0.*@dev"
+		"way/generators": "1.0.*@dev",
+		"imsky/holder": "2.*",
 	},
 	"autoload": {
 		"classmap": [

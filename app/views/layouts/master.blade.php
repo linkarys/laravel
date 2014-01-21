@@ -15,7 +15,10 @@
 		<script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
 	<![endif]-->
 
+
+
 	@section('header')
+
 
 	@show
 
@@ -36,6 +39,7 @@
 	</script>
 </head>
 <body data-spy="scroll" target="#nav-slide">
+
 	@include('layouts.nav')
 
 	<div class="container">
