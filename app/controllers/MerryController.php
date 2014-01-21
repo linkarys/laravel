@@ -2,6 +2,8 @@
 
 class MerryController extends BaseController {
 
+	protected $layout = 'layouts.master';
+	
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -9,7 +11,7 @@ class MerryController extends BaseController {
 	 */
 	public function index()
 	{
-        return View::make('merry.index');
+        $this->layout->content = View::make('merry.index');
 	}
 
 	/**
@@ -19,7 +21,7 @@ class MerryController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('merry.create');
+        $this->layout->content = View::make('merry.create');
 	}
 
 	/**
@@ -40,7 +42,7 @@ class MerryController extends BaseController {
 	 */
 	public function show($id)
 	{
-        return View::make('merry.show');
+        $this->layout->content = View::make('merry.show');
 	}
 
 	/**
@@ -51,7 +53,7 @@ class MerryController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('merry.edit');
+        $this->layout->content = View::make('merry.edit');
 	}
 
 	/**

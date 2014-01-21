@@ -33,6 +33,14 @@ Route::get('debug', function() {
 
 Route::resource('home', 'HomeController');
 
+Route::resource('/', 'HomeController');
+
+Route::get('db', function() {
+	$result = DB::select('select * from project');
+	r( $result);
+	// return View::make('home.index');
+});
+
 Route::controller('users', 'UsersController');
 
 Route::resource('posts', 'PostsController');
@@ -40,8 +48,6 @@ Route::resource('posts', 'PostsController');
 Route::resource('dogs', 'DogsController');
 
 Route::resource('merry', 'MerryController');
-
-Route::resource('/', 'HomeController');
 
 Route::resource('sunshine', 'Sunshine');
 

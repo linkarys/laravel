@@ -60,6 +60,8 @@ $framework = $app['path.base'].'/vendor/laravel/framework/src';
 
 require $framework.'/Illuminate/Foundation/start.php';
 
+require $app['path.base'].'/vendor/digitalnature/php-ref/ref.php';
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application

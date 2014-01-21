@@ -2,6 +2,8 @@
 
 class DogsController extends BaseController {
 
+	protected $layout = 'layouts.master';
+	
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -11,7 +13,7 @@ class DogsController extends BaseController {
 	{
 		$dogs = Dog::all();
 
-        return View::make('dogs.index', compact('dogs'));
+        	$this->layout->content = View::make('dogs.index', compact('dogs'));
 	}
 
 	/**
@@ -21,7 +23,7 @@ class DogsController extends BaseController {
 	 */
 	public function create()
 	{
-        return View::make('dogs.create');
+        	$this->layout->content = View::make('dogs.create');
 	}
 
 	/**
@@ -40,10 +42,10 @@ class DogsController extends BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($id=0)
 	{
 		$dog = Dog::find($id);
-        return View::make('dogs.show', compact('dog'));
+        	$this->layout->content = View::make('dogs.show', compact('dog'));
 	}
 
 	/**
@@ -54,7 +56,7 @@ class DogsController extends BaseController {
 	 */
 	public function edit($id)
 	{
-        return View::make('dogs.edit');
+        	$this->layout->content = View::make('dogs.edit');
 	}
 
 	/**

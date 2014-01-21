@@ -8,6 +8,7 @@
 		"twitter/bootstrap": "*",
 		"way/generators": "1.0.*@dev",
 		"imsky/holder": "2.*",
+		"digitalnature/php-ref": "*"
 	},
 	"autoload": {
 		"classmap": [
