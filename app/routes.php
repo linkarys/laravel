@@ -36,8 +36,10 @@ Route::resource('home', 'HomeController');
 Route::resource('/', 'HomeController');
 
 Route::get('db', function() {
-	$result = DB::select('select * from project');
-	r( $result);
+	// $result = DB::select('select * from project')->first();
+	// $result = Project::all();
+	$res = Project::find(2);
+	r( $res);
 	// return View::make('home.index');
 });
 
