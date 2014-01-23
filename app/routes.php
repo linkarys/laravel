@@ -38,9 +38,8 @@ Route::resource('/', 'HomeController');
 Route::get('db', function() {
 	// $result = DB::select('select * from project')->first();
 	// $result = Project::all();
-	$res = Project::find(2);
-	r( $res);
-	// return View::make('home.index');
+	$res = Post::with('comment')->get();
+	r($res[0]->comment);
 });
 
 Route::controller('users', 'UsersController');

@@ -5,7 +5,11 @@ class UsersController extends BaseController {
 	protected $layout = 'layouts.master';
 
 	public function getRegister() {
-		return $this->layout->content = View::make('users.register');
+		$this->layout->content = View::make('users.register');
+	}
+
+	public function getIndex() {
+		return 'index of users';
 	}
 
 	public function postCreate() {
